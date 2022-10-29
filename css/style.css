@@ -1,0 +1,292 @@
+/* imports  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk&display=swap');
+
+/* end of imports */
+
+/******************************************
+/* CSS
+/*******************************************/
+
+html {
+  background: #000000;
+  font-size: calc(93.75% + 0.390625vw);
+  font-family: "roboto" , 'Courier New', Courier, monospace;
+  transition: background 4s;
+}
+
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+
+#imageOTD {
+  visibility: hidden;
+}
+
+#videoOTD {
+  visibility: hidden;
+  display: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* universal styles */
+
+body {
+  background: #000000;
+  text-align: center;
+  color: #ffff;
+  font-size: 1rem;
+  transition: background 4s;
+  position: relative;
+  padding-bottom: 100vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.button {
+  padding: 0.8em 1em;
+  background: #00000064;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #0000009c;
+}
+
+.button:active {
+  background: #000000;
+}
+
+section {
+  padding: 3rem 1rem;
+}
+
+
+img {
+ width: 100%;
+ max-width: 800px; 
+}
+
+/* end universal styles */
+
+/* header section  */
+
+header {
+  padding: 2rem 1rem;
+  background: rgba( 0, 0, 0, 0.3 );
+box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
+backdrop-filter: blur( 7px );
+-webkit-backdrop-filter: blur( 7px );
+}
+
+header h1 {
+  margin: 1rem 0 2rem 0;
+}
+
+header .inputControl {
+  margin: 2rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#dateInput {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
+  padding: 0.5em;
+  margin: 10px 2px;
+  border: none; 
+  outline: none;
+  border-radius: 2px;
+  transition: outline 0.2s;
+  border: solid rgba(128, 128, 128, 0) 3px;
+}
+
+#dateInput::placeholder { /* Most modern browsers support this now. */
+  color:    rgba(0, 0, 0, 0.406);
+}
+
+#dateInput:hover {
+  outline: none;
+  border: solid #0000006a 3px;
+}
+
+#submitDate {
+  margin: 10px 2px;
+}
+
+/* end of header section */
+
+/* main section */
+
+#imageContainer {
+  background: rgba( 0, 0, 0, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
+  backdrop-filter: blur( 7px );
+  -webkit-backdrop-filter: blur( 7px );
+  border-radius: 3px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  /* grid-gap: 30px; */
+}
+
+#imageOTD {
+  margin: auto auto;
+}
+
+iframe {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto auto;
+}
+
+#imageAbout {
+  padding-left: 30px;
+}
+
+#imageAbout h3 {
+margin-bottom: 8px;
+}
+
+#imageAbout p {
+  text-align: justify;
+}
+
+/* end of main section */
+/* start of list section */
+
+#secondary ul {
+list-style-type: none;
+background: rgba( 0, 0, 0, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba(56, 56, 56, 0.37);
+  backdrop-filter: blur( 7px );
+  -webkit-backdrop-filter: blur( 7px );
+  border-radius: 3px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+justify-items: space-between;
+padding: 30px;
+margin: 0;
+}
+
+#secondary ul li {
+  background: #000000c3;
+  padding: 10px;
+  margin: 30px auto;
+  width: 200px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#secondary ul li img {
+  width: 100%;
+}
+
+#secondary ul li iframe {
+width: 100%;
+}
+
+#secondary ul li h4 {
+  margin: 10px 0 5px 0;
+}
+
+#secondary ul li span {
+  font-size: 0.8rem;
+}
+
+#clearPrevImages {
+  margin-top: 30px;
+}
+
+/* end of previous images section */
+
+/* footer */
+footer {
+  position: absolute;
+  text-align: center;
+  min-height: 2rem;
+  width: 100%;
+  bottom: 0;
+  margin: auto 0;
+  padding: 1rem;
+  background: #000;
+}
+
+footer p {
+  color: #ffff;
+}
+
+
+/* end of footer */
+
+/* ******************** */
+/* media queries */
+
+@media screen and (max-width:800px) {
+  
+  #imageContainer {
+    grid-template-columns: 50% 50%;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  
+  #imageContainer {
+    grid-template-columns: 100%;
+  }
+
+  #imageAbout {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+}
+
+/* end of media queries */
+/* ******************** */
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+/* scroll bar styles */
+/* width */
+::-webkit-scrollbar {
+width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(114, 111, 111);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(190, 190, 190);
+}
+
+/* end of scroll bar styles */

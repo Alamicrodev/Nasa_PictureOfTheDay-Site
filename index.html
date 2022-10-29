@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Nasa Picture Of the Day</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<!-- Toastify -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <!-- Toastifyjs -->
+	    <script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+		<!-- cleave -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js" integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+
+		<!-- javascript -->
+		<script type="text/javascript" defer src="js/main.js"></script>
+       
+
+
+	</head>
+	<body>
+		
+		<header>
+			<h1>Nasa Picture Of The Day</h1>
+			<div class="inputControl">
+			<input id="dateInput" placeholder="yyyy-mm-dd" type="text">
+			<input class="button" id="submitDate" type="button" value="Get Picture">
+	     	</div>
+		</header>
+
+		<section id="main">
+			<div id="imageContainer" >
+				<img id="imageOTD"  src=""  alt="Nasa Image of the date">
+				<iframe id="videoOTD" src=""> </iframe>
+				
+				<div id="imageAbout" >
+					<h3 id="imageOTDTitle" ></h3>
+			        <span id="imageOTDdate"></span>
+			        <p id="imageOTDSummary" ></p>
+				</div>
+				
+		    </div>
+		</section>
+
+		<section id="secondary" >
+			<h2>Previous Images</h2>
+			<ul id="prevImagesList">
+				
+			</ul>
+
+			<input class="button" id="clearPrevImages" type="button" value="Clear Previous Records">
+		</section>
+		
+<footer>
+<p> Nasa Picture Of The Day site coded by Mohid Alam / Alamicrodev for API usage challenge. </p>	
+</footer>
+
+		
+	</body>
+</html>

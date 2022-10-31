@@ -9,7 +9,7 @@
 
 html {
   background: #000000;
-  font-size: calc(93.75% + 0.390625vw);
+  font-size: calc(90% + 0.390625vw);
   font-family: "roboto" , 'Courier New', Courier, monospace;
   transition: background 4s;
 }
@@ -43,6 +43,7 @@ body {
   font-size: 1rem;
   transition: background 4s;
   position: relative;
+  min-height: 100vh;
   padding-bottom: 100vh;
 }
 
@@ -229,6 +230,10 @@ footer {
 
 footer p {
   color: #ffff;
+}
+
+footer p a {
+  color: purple;
 }
 
 
